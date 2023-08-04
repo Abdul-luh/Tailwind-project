@@ -15,7 +15,7 @@ const Contact = () => {
 				subject: subject,
 				message: message,
 			})
-			.then((res) => console.log(res));
+			.then((res) => alert(res.data));
 	};
 
 	return (
@@ -40,7 +40,7 @@ const Contact = () => {
 					minLength={3}
 					maxLength={60}
 					placeholder="your email"
-					className="border-slate-900 w-full rounded-xl border border-solid p-3 text-2xl text-black dark:border-none sm:text-3xl"
+					className="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
 				/>
 				<label htmlFor="subject">Subject:</label>
 				<input
