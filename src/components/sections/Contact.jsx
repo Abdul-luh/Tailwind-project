@@ -10,7 +10,7 @@ const Contact = () => {
 	const handleSendMail = async (e) => {
 		e.preventDefault();
 		axios
-			.post("/email", {
+			.post("https://back-end-mailer.vercel.app/", {
 				email: email,
 				subject: subject,
 				message: message,
@@ -40,7 +40,7 @@ const Contact = () => {
 					minLength={3}
 					maxLength={60}
 					placeholder="your email"
-					className="border-slate900 w-full rounded-xl border border-solid p-3 text-2xl text-black dark:border-none sm:text-3xl"
+					className="border-slate-900 w-full rounded-xl border border-solid p-3 text-2xl text-black dark:border-none sm:text-3xl"
 				/>
 				<label htmlFor="subject">Subject:</label>
 				<input
